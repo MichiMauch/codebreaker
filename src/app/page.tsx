@@ -42,11 +42,11 @@ export default function Home() {
           </p>
           <div className="bg-gray-700/70 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-gray-600/50">
             <p className="text-lg leading-relaxed text-gray-200">
-              {t.description.split('SEMIOS')[0]}
+              {t.description.replace('SEMIOS', 'SEMIOS_PLACEHOLDER').replace(language === 'de' ? '5 Rätsel' : '5 puzzles', 'PUZZLES_PLACEHOLDER').split('SEMIOS_PLACEHOLDER')[0]}
               <span className="font-bold text-cyan-400">SEMIOS</span>
-              {t.description.split('SEMIOS')[1].split('5')[0]}
+              {t.description.replace('SEMIOS', 'SEMIOS_PLACEHOLDER').replace(language === 'de' ? '5 Rätsel' : '5 puzzles', 'PUZZLES_PLACEHOLDER').split('SEMIOS_PLACEHOLDER')[1].split('PUZZLES_PLACEHOLDER')[0]}
               <span className="font-bold text-cyan-400">{language === 'de' ? '5 Rätsel' : '5 puzzles'}</span>
-              {t.description.split('5')[1]}
+              {t.description.replace('SEMIOS', 'SEMIOS_PLACEHOLDER').replace(language === 'de' ? '5 Rätsel' : '5 puzzles', 'PUZZLES_PLACEHOLDER').split('PUZZLES_PLACEHOLDER')[1]}
             </p>
           </div>
           <div className="flex flex-col items-center space-y-6">

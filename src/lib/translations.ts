@@ -17,7 +17,7 @@ export const translations = {
     riddle2Title: "AI-Paradoxon",
     riddle2Stage: "Etappe 2 von 5",
     riddle2Text1: "Die KI sagt:",
-    riddle2Text2: "&ldquo;Ich lüge immer.&rdquo;",
+    riddle2Text2: "\"Ich lüge immer.\"",
     riddle2Question: "Frage: Ist das wahr?",
     riddle2Success: "Ein Paradoxon zu lösen ist kein Paradoxon! Die zweite Ziffer ist: 2",
     
@@ -31,7 +31,7 @@ export const translations = {
     riddle4Title: "Hash mich, wenn du kannst",
     riddle4Stage: "Etappe 4 von 5", 
     riddle4Text1: "Die KI hat folgenden Hash gespeichert:",
-    riddle4Hint: "Hinweis: &ldquo;Das ist der SHA256-Hash von ... nichts?&rdquo;",
+    riddle4Hint: "Hinweis: \"Das ist der SHA256-Hash von ... nichts?\"",
     riddle4Success: "Das war wirklich ... nichts. Gut erkannt! Die vierte Ziffer ist: 0",
     
     // Riddle 5
@@ -74,7 +74,7 @@ export const translations = {
     riddle2Title: "AI Paradox",
     riddle2Stage: "Stage 2 of 5",
     riddle2Text1: "The AI says:",
-    riddle2Text2: "&ldquo;I always lie.&rdquo;", 
+    riddle2Text2: "\"I always lie.\"", 
     riddle2Question: "Question: Is this true?",
     riddle2Success: "Solving a paradox is no paradox! The second digit is: 2",
     
@@ -88,7 +88,7 @@ export const translations = {
     riddle4Title: "Hash me if you can",
     riddle4Stage: "Stage 4 of 5",
     riddle4Text1: "The AI has stored the following hash:",
-    riddle4Hint: "Hint: &ldquo;This is the SHA256 hash of ... nothing?&rdquo;",
+    riddle4Hint: "Hint: \"This is the SHA256 hash of ... nothing?\"",
     riddle4Success: "That was really ... nothing. Well spotted! The fourth digit is: 0",
     
     // Riddle 5
