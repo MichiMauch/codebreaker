@@ -14,7 +14,7 @@ export const translations = {
     riddle1Success: "Binär war gestern, ihr seid heute! Die erste Ziffer ist: 1",
     
     // Riddle 2  
-    riddle2Title: "AI-Paradoxon",
+    riddle2Title: "Wahrheit oder Lüge?",
     riddle2Stage: "Etappe 2 von 5",
     riddle2Text1: "Die KI sagt:",
     riddle2Text2: "\"Ich lüge immer.\"",
@@ -71,7 +71,7 @@ export const translations = {
     riddle1Success: "Binary was yesterday, you are today! The first digit is: 1",
     
     // Riddle 2
-    riddle2Title: "AI Paradox",
+    riddle2Title: "Truth or Lie?",
     riddle2Stage: "Stage 2 of 5",
     riddle2Text1: "The AI says:",
     riddle2Text2: "\"I always lie.\"", 
@@ -111,5 +111,119 @@ export const translations = {
     yourAnswer: "Your answer",
     wrongAnswer: "Wrong answer! You must start over.",
     wrongCode: "Code incorrect – SEMIOS remains locked."
+  },
+
+  fr: {
+    // Homepage
+    title: "Codebreaker",
+    subtitle: "L'IA a un secret. Pouvez-vous le découvrir ?",
+    description: "Une IA instable nommée SEMIOS s'est enfermée dans un coffre-fort numérique. Résolvez les 5 énigmes pour percer le code et la libérer.",
+    groupNamePlaceholder: "Entrez le nom du groupe",
+    startGame: "🚀 Commencer le jeu",
+    selectLanguage: "Sélectionner la langue:",
+    
+    // Riddle 1
+    riddle1Title: "Binaire décodé",
+    riddle1Stage: "Étape 1 sur 5",
+    riddle1Success: "Le binaire, c'était hier, vous êtes aujourd'hui ! Le premier chiffre est : 1",
+    
+    // Riddle 2
+    riddle2Title: "Vérité ou mensonge ?",
+    riddle2Stage: "Étape 2 sur 5",
+    riddle2Text1: "L'IA dit :",
+    riddle2Text2: "\"Je mens toujours.\"",
+    riddle2Question: "Question : Est-ce vrai ?",
+    riddle2Success: "Résoudre un paradoxe n'est pas un paradoxe ! Le deuxième chiffre est : 2",
+    
+    // Riddle 3
+    riddle3Title: "Analyser le pseudocode",
+    riddle3Stage: "Étape 3 sur 5",
+    riddle3Question: "Question : Quelle valeur est affichée ?",
+    riddle3Success: "Les mathématiques sont votre ami, pas votre ennemi ! Le troisième chiffre est : 8",
+    
+    // Riddle 4
+    riddle4Title: "Hachez-moi si vous pouvez",
+    riddle4Stage: "Étape 4 sur 5",
+    riddle4Text1: "L'IA a stocké le hash suivant :",
+    riddle4Hint: "Indice : \"C'est le hash SHA256 de ... rien ?\"",
+    riddle4Success: "C'était vraiment ... rien. Bien vu ! Le quatrième chiffre est : 0",
+    
+    // Riddle 5
+    riddle5Title: "Où tout a commencé",
+    riddle5Stage: "Étape 5 sur 5",
+    riddle5Text1: "La dernière position connue de SEMIOS était :",
+    riddle5Hint: "Astuce : Le résultat vous mène au pays d'origine d'Alan Turing.",
+    riddle5Success: "Correct – Alan Turing serait fier ! Le cinquième chiffre est : 1",
+    
+    // Final
+    finalTitle: "Étape finale : Décrypter SEMIOS",
+    finalDescription: "Entrez le code à 5 chiffres que vous avez collecté grâce aux énigmes.",
+    finalUnlock: "🔓 Déverrouiller",
+    finalSuccessTitle: "Accès accordé",
+    finalSuccessText1: "🎉 SEMIOS a été libéré ! 🎉",
+    finalSuccessText2: "Félicitations ! Vous avez résolu toutes les énigmes.",
+    
+    // Common
+    checkAnswer: "🔍 Vérifier",
+    yourAnswer: "Votre réponse",
+    wrongAnswer: "Mauvaise réponse ! Vous devez recommencer.",
+    wrongCode: "Code incorrect – SEMIOS reste verrouillé."
+  },
+
+  sl: {
+    // Homepage
+    title: "Codebreaker",
+    subtitle: "UI ima skrivnost. Ali jo lahko razkrijete?",
+    description: "Nestabilna UI z imenom SEMIOS se je zaklenila v digitalni sef. Rešite 5 ugank, da razbijete kodo in jo osvobodite.",
+    groupNamePlaceholder: "Vnesite ime skupine",
+    startGame: "🚀 Začni igro",
+    selectLanguage: "Izberi jezik:",
+    
+    // Riddle 1
+    riddle1Title: "Binarno dekodirano",
+    riddle1Stage: "Stopnja 1 od 5",
+    riddle1Success: "Binarno je bilo včeraj, vi ste danes! Prva številka je: 1",
+    
+    // Riddle 2
+    riddle2Title: "Resnica ali laž?",
+    riddle2Stage: "Stopnja 2 od 5",
+    riddle2Text1: "UI pravi:",
+    riddle2Text2: "\"Vedno lažem.\"",
+    riddle2Question: "Vprašanje: Ali je to res?",
+    riddle2Success: "Rešiti paradoks ni paradoks! Druga številka je: 2",
+    
+    // Riddle 3
+    riddle3Title: "Analiziraj psevdokodo",
+    riddle3Stage: "Stopnja 3 od 5",
+    riddle3Question: "Vprašanje: Katera vrednost je izpisana?",
+    riddle3Success: "Matematika je vaš prijatelj, ne sovražnik! Tretja številka je: 8",
+    
+    // Riddle 4
+    riddle4Title: "Razpršite me, če lahko",
+    riddle4Stage: "Stopnja 4 od 5",
+    riddle4Text1: "UI je shranila naslednji hash:",
+    riddle4Hint: "Namig: \"To je SHA256 hash od ... nič?\"",
+    riddle4Success: "To je bilo res ... nič. Dobro opaženo! Četrta številka je: 0",
+    
+    // Riddle 5
+    riddle5Title: "Kjer se je vse začelo",
+    riddle5Stage: "Stopnja 5 od 5",
+    riddle5Text1: "Zadnji znani položaj SEMIOS je bil:",
+    riddle5Hint: "Namig: Rezultat vas pripelje do domovine Alana Turinga.",
+    riddle5Success: "Pravilno – Alan Turing bi bil ponosen! Peta številka je: 1",
+    
+    // Final
+    finalTitle: "Zadnji korak: Dešifriraj SEMIOS",
+    finalDescription: "Vnesite 5-mestno kodo, ki ste jo zbrali z ugankami.",
+    finalUnlock: "🔓 Odkleni",
+    finalSuccessTitle: "Dostop odobren",
+    finalSuccessText1: "🎉 SEMIOS je bil osvobojen! 🎉",
+    finalSuccessText2: "Čestitke! Rešili ste vse uganke.",
+    
+    // Common
+    checkAnswer: "🔍 Preveri",
+    yourAnswer: "Vaš odgovor",
+    wrongAnswer: "Napačen odgovor! Začeti morate znova.",
+    wrongCode: "Koda napačna – SEMIOS ostaja zaklenjen."
   }
 };

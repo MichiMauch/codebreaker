@@ -6,7 +6,7 @@ import { translations } from '@/lib/translations';
 
 export default function Home() {
   const [groupName, setGroupName] = useState('');
-  const [language, setLanguage] = useState<'de' | 'en'>('de');
+  const [language, setLanguage] = useState<'de' | 'en' | 'fr' | 'sl'>('de');
   const router = useRouter();
   
   const t = translations[language];
@@ -17,7 +17,10 @@ export default function Home() {
       localStorage.setItem('language', language);
       router.push('/riddle/1');
     } else {
-      const message = language === 'de' ? 'Bitte gib einen Gruppennamen ein.' : 'Please enter a group name.';
+      const message = language === 'de' ? 'Bitte gib einen Gruppennamen ein.' : 
+                      language === 'en' ? 'Please enter a group name.' :
+                      language === 'fr' ? 'Veuillez entrer un nom de groupe.' :
+                      'Prosimo, vnesite ime skupine.';
       alert(message);
     }
   };
@@ -37,44 +40,53 @@ export default function Home() {
           <h1 className="text-5xl sm:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
             {t.title}
           </h1>
+          <div className="flex justify-center gap-3 mb-6">
+            <button
+              onClick={() => setLanguage('de')}
+              className={`w-12 h-12 rounded-full transition-all duration-300 hover:scale-110 ${
+                language === 'de' ? 'ring-4 ring-cyan-500 shadow-lg' : 'hover:shadow-md'
+              }`}
+            >
+              <span className="text-2xl">🇩🇪</span>
+            </button>
+            <button
+              onClick={() => setLanguage('en')}
+              className={`w-12 h-12 rounded-full transition-all duration-300 hover:scale-110 ${
+                language === 'en' ? 'ring-4 ring-cyan-500 shadow-lg' : 'hover:shadow-md'
+              }`}
+            >
+              <span className="text-2xl">🇬🇧</span>
+            </button>
+            <button
+              onClick={() => setLanguage('fr')}
+              className={`w-12 h-12 rounded-full transition-all duration-300 hover:scale-110 ${
+                language === 'fr' ? 'ring-4 ring-cyan-500 shadow-lg' : 'hover:shadow-md'
+              }`}
+            >
+              <span className="text-2xl">🇫🇷</span>
+            </button>
+            <button
+              onClick={() => setLanguage('sl')}
+              className={`w-12 h-12 rounded-full transition-all duration-300 hover:scale-110 ${
+                language === 'sl' ? 'ring-4 ring-cyan-500 shadow-lg' : 'hover:shadow-md'
+              }`}
+            >
+              <span className="text-2xl">🇸🇮</span>
+            </button>
+          </div>
           <p className="text-xl sm:text-2xl mb-6 text-gray-300">
             {t.subtitle}
           </p>
           <div className="bg-gray-700/70 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-gray-600/50">
             <p className="text-lg leading-relaxed text-gray-200">
-              {t.description.replace('SEMIOS', 'SEMIOS_PLACEHOLDER').replace(language === 'de' ? '5 Rätsel' : '5 puzzles', 'PUZZLES_PLACEHOLDER').split('SEMIOS_PLACEHOLDER')[0]}
+              {t.description.replace('SEMIOS', 'SEMIOS_PLACEHOLDER').replace(language === 'de' ? '5 Rätsel' : language === 'en' ? '5 puzzles' : language === 'fr' ? '5 énigmes' : '5 ugank', 'PUZZLES_PLACEHOLDER').split('SEMIOS_PLACEHOLDER')[0]}
               <span className="font-bold text-cyan-400">SEMIOS</span>
-              {t.description.replace('SEMIOS', 'SEMIOS_PLACEHOLDER').replace(language === 'de' ? '5 Rätsel' : '5 puzzles', 'PUZZLES_PLACEHOLDER').split('SEMIOS_PLACEHOLDER')[1].split('PUZZLES_PLACEHOLDER')[0]}
-              <span className="font-bold text-cyan-400">{language === 'de' ? '5 Rätsel' : '5 puzzles'}</span>
-              {t.description.replace('SEMIOS', 'SEMIOS_PLACEHOLDER').replace(language === 'de' ? '5 Rätsel' : '5 puzzles', 'PUZZLES_PLACEHOLDER').split('PUZZLES_PLACEHOLDER')[1]}
+              {t.description.replace('SEMIOS', 'SEMIOS_PLACEHOLDER').replace(language === 'de' ? '5 Rätsel' : language === 'en' ? '5 puzzles' : language === 'fr' ? '5 énigmes' : '5 ugank', 'PUZZLES_PLACEHOLDER').split('SEMIOS_PLACEHOLDER')[1].split('PUZZLES_PLACEHOLDER')[0]}
+              <span className="font-bold text-cyan-400">{language === 'de' ? '5 Rätsel' : language === 'en' ? '5 puzzles' : language === 'fr' ? '5 énigmes' : '5 ugank'}</span>
+              {t.description.replace('SEMIOS', 'SEMIOS_PLACEHOLDER').replace(language === 'de' ? '5 Rätsel' : language === 'en' ? '5 puzzles' : language === 'fr' ? '5 énigmes' : '5 ugank', 'PUZZLES_PLACEHOLDER').split('PUZZLES_PLACEHOLDER')[1]}
             </p>
           </div>
           <div className="flex flex-col items-center space-y-6">
-            <div className="w-full max-w-md">
-              <label className="block text-sm font-medium text-gray-300 mb-2">{t.selectLanguage}</label>
-              <div className="flex gap-2 mb-4">
-                <button
-                  onClick={() => setLanguage('de')}
-                  className={`flex-1 py-2 px-4 rounded-xl font-medium transition-all duration-300 ${
-                    language === 'de'
-                      ? 'bg-cyan-500 text-white shadow-lg'
-                      : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
-                  }`}
-                >
-                  🇩🇪 Deutsch
-                </button>
-                <button
-                  onClick={() => setLanguage('en')}
-                  className={`flex-1 py-2 px-4 rounded-xl font-medium transition-all duration-300 ${
-                    language === 'en'
-                      ? 'bg-cyan-500 text-white shadow-lg'
-                      : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
-                  }`}
-                >
-                  🇬🇧 English
-                </button>
-              </div>
-            </div>
             <input
               type="text"
               value={groupName}
